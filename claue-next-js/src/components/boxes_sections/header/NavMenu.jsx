@@ -44,7 +44,7 @@ const navList = [
       ],
     ],
     label: "New",
-    label_color: "red",
+    label_color: "#ec0101",
   },
   {
     title: "Product",
@@ -65,7 +65,9 @@ const navList = [
   {
     title: "Sale",
     path: "/",
-    defaultColor: "red",
+    label:"Sale",
+    label_color:"#FFA800",
+    defaultColor: "#ec0101",
     children: [],
   },
   {
@@ -106,7 +108,7 @@ const navList = [
 const Navbar = () => {
   return (
     <nav className="p-4">
-      <ul className="flex space-x-4 ">
+      <ul className="flex space-x-6 ">
         {
           navList.map((nav_item,index)=>
           <NavItem key={index} nav_item={nav_item}/>
@@ -126,7 +128,7 @@ const NavItem = ({ nav_item }) => {
         {nav_item?.title}
       </Link>
      {nav_item?.children.length? <Dropdown nav_dropdown={nav_item?.children} />:<></>}
-      {nav_item?.label?<span className="absolute top-[-10px] right-[-10px]">{nav_item?.label}</span>:<></> }
+      {nav_item?.label?<span className={`absolute top-[-15px] right-[-20px] text-[8px]  text-white px-2 py-1 rounded-full`} style={{backgroundColor:nav_item?.label_color}}>{nav_item?.label}</span>:<></> }
     </li>
   );
 };
