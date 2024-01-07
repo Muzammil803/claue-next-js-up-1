@@ -9,7 +9,7 @@ import { CgProfile } from "react-icons/cg";
 import { CiHeart } from "react-icons/ci";
 import { PiShoppingBagLight } from "react-icons/pi";
 
-import { NavMenu } from "./NavMenu";
+import  NavMenu  from "./NavMenu";
 
 const Header = () => {
   return (
